@@ -16,8 +16,8 @@
 }
 
 .navmenu {
-    flex: 1;
     display: flex;
+    align-content: flex-end;
 }
 
 .navcontent1,
@@ -61,9 +61,11 @@
 /* The dropdown container */
 
 .dropdown {
-    float: center;
+     float: none; 
+    align-self: auto;
     overflow: hidden;
-    flex: 1;
+   
+   
 }
 
 
@@ -72,6 +74,7 @@
 .dropdown .dropbtn {
     font-size: 16px;
     border: none;
+    flex: 1;
     outline: none;
     color: white;
     padding: 14px 16px;
@@ -85,8 +88,7 @@
 
 /* Add a red background color to navbar links on hover */
 
-.navbar a:hover,
-.dropdown:hover .dropbtn {
+.dropbtn:hover {
     background-color: rgb(74, 14, 131);
 }
 
@@ -205,4 +207,5 @@ footer{
     .topnav input[type=text] {
       border: 1px solid #ccc;
     }
+    
   }

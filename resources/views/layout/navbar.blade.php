@@ -24,6 +24,14 @@
  <a href="/">FORUM</a>
 </div>
     <div class="navmenu">
+                <div class="navcontent1">
+                    <a href="/">Login</a>
+                </div>
+
+                <div class="navcontent1">
+                    <a href="/">Register</a>
+                </div>
+
                 <div class="dropdown">
                         <button class="dropbtn">Fields
                         <i class="fa fa-caret-down"></i>
