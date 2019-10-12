@@ -12,18 +12,20 @@
 
 .logo {
     flex: 1;
-    padding: 2rem;
+    padding: 1rem 15rem;
+    text-align: left;
 }
 
 .navmenu {
     display: flex;
-    align-content: flex-end;
+    flex: 3;
+    
+    height: 60px;
 }
 
 .navcontent1,
 .navcontent2 {
     color: white;
-    flex: 1;
     padding: 1rem;
 }
 
@@ -44,7 +46,16 @@
     background-color: #333;
     font-family: Arial;
 }
+#navmenulist .navitem {display:inline-block; }
 
+.norm{
+    float: none; 
+    height: 30px;
+    padding: 1rem;
+    overflow: hidden;
+    font-size: 16px;
+    flex: 1;
+}
 
 /* Links inside the navbar */
 
@@ -62,6 +73,7 @@
 
 .dropdown {
      float: none; 
+        
     align-self: auto;
     overflow: hidden;
    
@@ -77,7 +89,7 @@
     flex: 1;
     outline: none;
     color: white;
-    padding: 14px 16px;
+    padding: 20px 20px;
     background-color: inherit;
     font-family: inherit;
     /* Important for vertical align on mobile phones */
@@ -188,6 +200,7 @@ footer{
     padding: 6px 10px;
     margin-top: 8px;
     margin-right: 16px;
+    margin-bottom: 8px;
     background: #ddd;
     font-size: 17px;
     border: none;
