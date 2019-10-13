@@ -28,26 +28,85 @@
 
 
 <div class="topnav">
-  <a href="/">Home</a>
-  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Login</a>
-       
-  <a href="#contact">Register</a>   
-  <div class="dropdown">
-                            <button class="dropbtn">Fields
-                            <i class="fa fa-caret-down"></i>
-                            </button>
-                            <div class="dropdown-content">
-                                <a href="/timeline1">Python</a>
-                                <a href="/timeline">Java</a>
-                                <a href="/timeline2">C++</a>
+    <a href="/">Home</a>
+    <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Login</a> -->
+
+    <div class="w3-container">
+    
+        <button onclick="document.getElementById('id01').style.display='block'" class="w3-button">Login</button>
+
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content">
+            <div class="w3-container">
+                <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright w3-black">&times;</span>
+                <form class="modal-content animate" action="/action_page.php" method="post">
+
+                    <div class="container">
+                    <label for="uname"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="password" required>
+                        
+                    <button type="submit">Login</button>
+                    <!-- <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label> -->
+                    </div>
+
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <a href="#contact">Register</a>    -->
+
+    <div class="w3-container">
+    
+        <button onclick="document.getElementById('id02').style.display='block'" class="w3-button">Register</button>
+
+        <div id="id02" class="w3-modal">
+            <div class="w3-modal-content">
+            <div class="w3-container">
+                <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright w3-black">&times;</span>
+                <form class="modal-content animate" action="/action_page.php" method="post">
+
+                    <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+
+                    <label for="uname"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="password" required>
+                        
+                    <button type="submit">Register</button>
+                    </div>
+
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dropdown">
+                                <button class="dropbtn">Fields
+                                <i class="material-icons">arrow_drop_down</i>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="/timeline1">Python</a>
+                                    <a href="/timeline">Java</a>
+                                    <a href="/timeline2">C++</a>
+                                </div>
                             </div>
-                        </div>
-  <div class="search-container">
-    <form action="/action_page.php">
-      <input type="text" placeholder="Search.." name="search">
-      <button type="submit"><i class="material-icons">search</i></button>
-    </form>
-  </div>
+    <div class="search-container">
+        <form action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="material-icons">search</i></button>
+        </form>
+    </div>
 </div>
 
 @yield('content')
