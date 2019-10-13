@@ -1,5 +1,5 @@
 
-
+<title>Doubt Forum</title>
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script>     
@@ -39,7 +39,7 @@
             <div class="w3-modal-content">
             <div class="w3-container">
                 <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright w3-black">&times;</span>
-                <form class="modal-content animate" action="/action_page.php" method="post">
+                <form class="modal-content animate" action="{{ url('/login') }}" method="post">
 
                     <div class="container">
                     <label for="uname"><b>Email</b></label>
@@ -70,11 +70,11 @@
             <div class="w3-modal-content">
             <div class="w3-container">
                 <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright w3-black">&times;</span>
-                <form class="modal-content animate" action="/action_page.php" method="post">
+                <form class="modal-content animate" action="{{ url('/register') }}" method="get">
 
                     <div class="container">
                     <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required>
+                    <input type="text" placeholder="Enter Username" name="name" required>
 
                     <label for="uname"><b>Email</b></label>
                     <input type="text" placeholder="Enter Email" name="email" required>
