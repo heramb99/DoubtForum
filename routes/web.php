@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::get('/login','HomeController@login');
+Route::post('/login','HomeController@login');
 
 Route::get('/register','HomeController@register');
+
+Route::get('/logout','HomeController@logout');
+
+

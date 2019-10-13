@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\User;
-
+use Session;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -27,12 +27,17 @@ class HomeController extends Controller
                    // $_SESSION['user']=$user;
                    Session::put('user', $user);
                    
-                  return view('loggedinpage');
+                  return view('loggedinpage',compact('user'));
                }
           else 
           return  back()->withErrors(['Wrong Credentials']);     
    
     }
+    public function logout(){
+        Session::forget('user');
+        return view('welcome');
+    }
+      
 
     public function register(){
         $data=request()->validate(
@@ -43,7 +48,7 @@ class HomeController extends Controller
             ]);
             $user= User::create($data);
 
-            return view('loggedinpage');
+            return view('welcome');
 
     }
 }

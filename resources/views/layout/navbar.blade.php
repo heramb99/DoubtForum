@@ -40,7 +40,7 @@
             <div class="w3-container">
                 <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright w3-black">&times;</span>
                 <form class="modal-content animate" action="{{ url('/login') }}" method="post">
-
+                @csrf
                     <div class="container">
                     <label for="uname"><b>Email</b></label>
                     <input type="text" placeholder="Enter Email" name="email" required>
@@ -71,7 +71,7 @@
             <div class="w3-container">
                 <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright w3-black">&times;</span>
                 <form class="modal-content animate" action="{{ url('/register') }}" method="get">
-
+                @csrf
                     <div class="container">
                     <label for="uname"><b>Username</b></label>
                     <input type="text" placeholder="Enter Username" name="name" required>
