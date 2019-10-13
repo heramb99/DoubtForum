@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+
 
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -24,26 +22,17 @@
     
     <link href="http://allfont.net/allfont.css?fonts=comic-sans-ms" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
 
-</head>
-<body>
-<nav class="homepagenav">
 
-<div class="logo">
- <a href="/">FORUM</a>
-</div>
-    <div class="navmenu">
-        <div class="nav-wrapper container">
-            <ul id="navmenulist">
-                    <li class="navitem">
-                        <div class="norm"><a class="waves-effect waves-light btn modal-trigger" href="#modal1">Login</a></div>
-                    </li>
-                    <li class="navitem">
-                       <div class="norm"><a href="/">Register</a></div>
-                    </li>
 
-                    <li class="navitem">
-                        <div class="dropdown">
+<div class="topnav">
+  <a href="/">Home</a>
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Login</a>
+       
+  <a href="#contact">Register</a>   
+  <div class="dropdown">
                             <button class="dropbtn">Fields
                             <i class="fa fa-caret-down"></i>
                             </button>
@@ -53,29 +42,13 @@
                                 <a href="/timeline2">C++</a>
                             </div>
                         </div>
-                    </li>
-                    <li class="navitem">
-                        <div class="search-container">
-                            <form action="/action_page.php">
-                                <input type="text" placeholder="Search.." name="search">
-                                <button type="submit"><i class="material-icons">search</i></button>
-                            </form>
-                        </div>
-                    </li>
-            </ul>
-            {{-- Login Modal --}}
-                            <div id="modal1" class="modal">
-                                <div class="modal-content">
-                                <h4>Modal Header</h4>
-                                <p>A bunch of text</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <a href="#!" class="modal-action modal-close waves-effect waves-red btn red lighten-1">Agree</a>
-                                </div>
-                            </div>
-        </div>
-    </div>
-</nav>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="material-icons">search</i></button>
+    </form>
+  </div>
+</div>
 
 @yield('content')
 
@@ -97,6 +70,6 @@
     
 </footer>
     
-</body>
-</html>
+
+
 
