@@ -89,7 +89,7 @@ class HomeController extends Controller
 
             $q=new Question();
             $q->question=request()->question;
-            $q->field=request()->question;
+            $q->field=request()->field;
             $q->uid=$user->user_id;
 
             $q->save();
