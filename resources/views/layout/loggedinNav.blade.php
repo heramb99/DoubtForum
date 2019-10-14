@@ -28,7 +28,7 @@
 
 
 <div class="topnav">
-    <a href="/loggedinpage">Welcome {{ $user->name }}</a>
+    <a href="#">Welcome {{ $user->name }}</a>
    
 
     <div class="dropdown">
