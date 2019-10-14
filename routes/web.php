@@ -21,4 +21,8 @@ Route::get('/register','HomeController@register');
 
 Route::get('/logout','HomeController@logout');
 
+Route::get('/ask','HomeController@question');
+
+Route::post('/addquestion','HomeController@addquestion');
+
 

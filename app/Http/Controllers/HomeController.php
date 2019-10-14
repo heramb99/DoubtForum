@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\User;
+use App\Question;
 use Session;
 use Illuminate\Http\Request;
 
@@ -57,5 +58,49 @@ class HomeController extends Controller
             
             return back()->with($notification);
 
+    }
+
+    public function question(){
+        if(Session::get('user')==null){
+
+            return view('welcome');
+        }
+               
+         else $user=Session::get('user');  
+    
+         return view('ask',compact('user')) ;
+    }
+
+    public function addquestion(){
+        if(Session::get('user')==null){
+
+            return view('welcome');
+        }
+               
+         else $user=Session::get('user');
+         
+         
+        
+         $data=request()->validate(
+            [
+                "question"=>'required',
+                "field"=>'required',
+            ]);
+
+            $q=new Question();
+            $q->question=request()->question;
+            $q->field=request()->question;
+            $q->uid=$user->user_id;
+
+            $q->save();
+
+            echo "success";
+
+            $notification = array(
+              'message' => 'Question Submitted',
+              'alert-type' => 'success'
+            );
+
+            return back()->with($notification);
     }
 }
