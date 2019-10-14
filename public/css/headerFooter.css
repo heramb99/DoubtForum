@@ -76,6 +76,10 @@ background-color: rgb(74, 14, 131);
   float: right;
 }
 
+.topnav .logoutBT {
+  float: right;
+}
+
 .topnav input[type=text] {
   padding: 6px;
   margin-top: 8px;
