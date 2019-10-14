@@ -47,8 +47,15 @@ class HomeController extends Controller
                 "password"=>'required',
             ]);
             $user= User::create($data);
+            
+            echo "success";
 
-            return view('welcome');
+  			$notification = array(
+                'message' => 'Successfully get laravel data!',
+                'alert-type' => 'success'
+              );
+            
+            return back()->with($notification);
 
     }
 }
