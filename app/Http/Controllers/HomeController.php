@@ -51,7 +51,7 @@ class HomeController extends Controller
             echo "success";
 
   			$notification = array(
-                'message' => 'Successfully get laravel data!',
+                'message' => 'Account Created Successfully',
                 'alert-type' => 'success'
               );
             
