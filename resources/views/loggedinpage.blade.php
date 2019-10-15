@@ -33,10 +33,8 @@
                               <p class="center light">Get Your Doubt Clear</p>
                           </div>
                           </div>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                      
-                        
-                     
-                        
                         <div class="card">
                         <div class="icon-block">
                             <h2 class="center brown-text"><i class="material-icons">cloud_upload</i></h2>
@@ -45,8 +43,8 @@
                             <p class="center light">List Of Question Asked By You</p>
                         </div>
                         
-</div>
-                  
+                       </div>
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         
                         
                         <div class="card">
