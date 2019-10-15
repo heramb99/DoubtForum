@@ -8,14 +8,14 @@
             }
 
             #content-wrap {
-              padding-bottom: 2.5rem;    /* Footer height */
+              padding-bottom: 10rem;    /* Footer height */
             }
 
             footer {
               position: absolute;
               bottom: 0;
               width: 100%;
-              height: 2.5rem;            /* Footer height */
+              height: 10rem;           /* Footer height */
             }
         </style>
         <script src="{{ asset('js/app.js') }}"></script>
@@ -30,8 +30,7 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
-            <title>IT UPDATES</title>
-
+            
             <link rel="stylesheet" href="css/style.css">
             <link rel="stylesheet" href="css/headerFooter.css">
 
@@ -52,7 +51,7 @@
             <a href="#">Your Answers</a>
             
             
-            <div class="dropdown">
+            <div class="dropdown" >
                                         <button class="dropbtn">Topics
                                             <i class="material-icons">arrow_drop_down</i>
                                         </button>
@@ -62,12 +61,14 @@
                                             <a href="/timeline2">C++</a>
                                         </div>
             </div>
+        
             
-            
-            <div class="logoutBT">
-                <form action="{{ url('/logout') }}" method="get">
-                    <button type="submit" class="">Logout</button>
-                </form>
+            <div class="w3-container">
+                <div class="logoutBT">
+                    <form action="{{ url('/logout') }}" method="get">
+                        <button type="submit" class="">Logout</button>
+                    </form>
+                </div>
             </div>
         </div>
     </head>

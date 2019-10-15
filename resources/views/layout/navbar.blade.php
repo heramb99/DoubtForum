@@ -12,7 +12,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>IT UPDATES</title>
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/headerFooter.css">
@@ -92,7 +91,7 @@
     </div>
 
     <div class="dropdown">
-                                <button class="dropbtn">Fields
+                                <button class="dropbtn">Topics
                                 <i class="material-icons">arrow_drop_down</i>
                                 </button>
                                 <div class="dropdown-content">
