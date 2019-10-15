@@ -61,6 +61,8 @@ body {
     background-color: #3e64ff;
 
 }
+
+
 .w3-container .button:hover{
     background-color: rgb(74, 14, 131);
     color: white;
@@ -79,6 +81,7 @@ background-color: rgb(74, 14, 131);
 .topnav .logoutBT {
   float: right;
 }
+
 
 .topnav input[type=text] {
   padding: 6px;
@@ -193,7 +196,7 @@ background-color: rgb(74, 14, 131);
   width: 100%;
 }
 
-.w3-container:hover, .w3-container button:hover {
+ button:hover {
   opacity: 0.8;
   background-color: rgb(74, 14, 131);
 }
@@ -252,6 +255,24 @@ span.psw {
 .close:focus {
   color: red;
   cursor: pointer;
+}
+
+.card {
+  width: 20rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 3rem;
+  border: 0.4px solid lightseagreen;
+  flex-basis: 35%;
+  background: #d0f2f3;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  transition: all .2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.2);
+  box-shadow: 1rem 1rem 1rem grey;
 }
 
 

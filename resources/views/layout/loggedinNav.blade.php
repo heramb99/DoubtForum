@@ -66,7 +66,7 @@
             
             <div class="logoutBT">
                 <form action="{{ url('/logout') }}" method="get">
-                    <button type="submit" class="w3-button">Logout</button>
+                    <button type="submit" class="">Logout</button>
                 </form>
             </div>
         </div>
