@@ -103,4 +103,17 @@ class HomeController extends Controller
 
             return back()->with($notification);
     }
+
+    public function fetchquestion(){
+
+        if(Session::get('user')==null){
+
+            return view('welcome');
+        }
+               
+         else $user=Session::get('user');
+
+         
+
+    }
 }

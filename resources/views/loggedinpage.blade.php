@@ -23,25 +23,33 @@
                  <div class="section">
              
                    <!--   Icon Section   -->
-                   <div class="row">
-                        <div class="col s12 m4">
-                        <div class="icon-block">
-                            <h2 class="center brown-text"><i class="material-icons">send</i></h2>
-                            <a href="{{ url('/ask') }}"><h5 class="center">Ask</h5></a>
-                            <p class="center light">Get Your Doubt Clear</p>
-                        </div>
-                        </div>
+                   
+                    
+                          
+                          <div class="card">
+                          <div class="icon-block">
+                              <h2 class="center brown-text"><i class="material-icons">send</i></h2>
+                              <a href="{{ url('/ask') }}"><h5 class="center">Ask</h5></a>
+                              <p class="center light">Get Your Doubt Clear</p>
+                          </div>
+                          </div>
+                     
                         
-                        <div class="col s12 m4">
+                     
+                        
+                        <div class="card">
                         <div class="icon-block">
                             <h2 class="center brown-text"><i class="material-icons">cloud_upload</i></h2>
-                            <a href="{{ url('/delete') }}"><h5 class="center">Your Question</h5></a>
+                            <a href="{{ url('/fetchquestion') }}"><h5 class="center">Your Questions</h5></a>
                 
                             <p class="center light">List Of Question Asked By You</p>
                         </div>
-                        </div>
                         
-                        <div class="col s12 m4">
+</div>
+                  
+                        
+                        
+                        <div class="card">
                         <div class="icon-block">
                             <h2 class="center brown-text"><i class="material-icons">insert_comment</i></h2>
                             <h5 class="center"><a href='/viewreport'>Your Answers</a></h5>
@@ -50,9 +58,9 @@
                         </div>
                         </div>
                         
-                   </div>
+                  
              
-                 </div>
+                
                </div>
 </div>
 

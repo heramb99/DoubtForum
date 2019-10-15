@@ -25,4 +25,6 @@ Route::get('/ask','HomeController@question');
 
 Route::post('/addquestion','HomeController@addquestion');
 
+Route::get('/fetchquestion','HomeController@fetchquestion');
+
 
