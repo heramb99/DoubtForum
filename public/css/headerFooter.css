@@ -193,8 +193,9 @@ background-color: rgb(74, 14, 131);
   width: 100%;
 }
 
-button:hover {
+.w3-container:hover, .w3-container button:hover {
   opacity: 0.8;
+  background-color: rgb(74, 14, 131);
 }
 
 /* Extra styles for the cancel button */

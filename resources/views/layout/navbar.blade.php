@@ -33,7 +33,7 @@
 
     <div class="w3-container">
     
-        <button onclick="document.getElementById('id01').style.display='block'" class="w3-button">Login</button>
+        <button onclick="document.getElementById('id01').style.display='block'">Login</button>
         
         <div id="id01" class="w3-modal">
             <div class="w3-modal-content">
@@ -64,7 +64,7 @@
 
     <div class="w3-container">
     
-        <button onclick="document.getElementById('id02').style.display='block'" class="w3-button">Register</button>
+        <button onclick="document.getElementById('id02').style.display='block'">Register</button>
 
         <div id="id02" class="w3-modal">
             <div class="w3-modal-content">
