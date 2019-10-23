@@ -35,6 +35,10 @@ Route::get('/cq','HomeController@fetchquestionforc');
 
 Route::get('/answer/{qid}','HomeController@fetchanswers');
 
+Route::get('/addanswer/{qdetails}','HomeController@addanswers');
+
+Route::get('/fetchqna','HomeController@viewanswers');
+
 Route::get('/seequestion',function() {
     return view('question');
 });

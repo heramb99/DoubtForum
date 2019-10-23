@@ -19,19 +19,27 @@
       </script>             
    </head> 
     
-   
+<ul>
+   @foreach($nestedarray as $qna)
+    <li>
+    <?php $key=array_search($qna ,$nestedarray) ?>
+   <div class="container ">
+  <div class="section" style="background-color:#6b85ea;text-align: center;">
+       <div class="row">
+        <div class="col s6 offset-s6"><h5>Question</h5></div><br><br>
+        <div class="col s12"><p>&nbsp;{{$key}}</p></div>
+       </div>  
+  </div>
 
-         @foreach ($queslist as $singleques) 
-                  
-            <div class="container ">
-            <?php $key=array_search($singleques ,$queslist) ?>
-              <div class="section">
-                   <div class="row">
-                   <?php $key=array_search($singleques,$queslist) ?>
-                    <div class="col s12"><a href="{{ url('answer',['qid'=> $key]) }}" >{{$singleques}}</a></div>
-                   </div>  
-              </div>
-              <div class="divider"></div>
-            </div>
-        @endforeach
+
+         <div class="divider"></div>
+         <div class="section" style="background-color:#9aadf4">
+               <div class="row">
+               <div class="col s12"><h5>&nbsp;Answer</h5></div><br><br>
+               <div class="col s12"><p>&nbsp;{{$qna}}</p></div>
+               </div>  
+         </div>
+      </li>
+      @endforeach
+  </ul>
 @endsection

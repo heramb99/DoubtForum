@@ -16,7 +16,21 @@
       <script type = "text/javascript"
          src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
       <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
-      </script>             
+      </script>      
+
+<script>
+	@if(Session::has('message'))
+		var type="{{Session::get('alert-type','info')}}"
+
+		switch(type){
+	        case 'success':
+	            toastr.success("{{ Session::get('message') }}");
+	            break;
+
+		}
+	@endif
+</script>
+
    </head> 
 
  
@@ -47,11 +61,16 @@
   </ul>
   <div class="section" style="background-color:#6b85ea">
        <div class="row">
-           <form>
+       <?php $qd=$quest->id ?>
+         
+           <form action="{{ url('addanswer',['qdetails'=> $qd]) }}">
+          
+           @csrf
                <div class="col s12"><h5>&nbsp;Your Answer</h5></div><br><br>
-               <div class="col s12" style="background-color:white"><textarea rows="50" cols="120"></textarea></div>
+               <div class="col s12" style="background-color:white"><input type="text" name="postanswer" id="answer" style="width:80%;" >
+</div>
                <div class="col s12"><span>&nbsp;</span></div>
-               &nbsp;&nbsp;&nbsp;<input type="submit" value="Post answer">
+               &nbsp;&nbsp;&nbsp;<input type="submit">
            </form>
        </div>  
   </div>

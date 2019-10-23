@@ -115,19 +115,19 @@ class HomeController extends Controller
          else $user=Session::get('user');
 
          $quest= Question::where('uid',$user->user_id)->get();
-
+        
         $qno=array();
 
         for($i=0;$i<count($quest);$i++){
-            $qno[$i] =$quest[$i]->question;
+            $qno[$i] =$quest[$i]->id;
         }
 
         $queslist=array();
-    for($i=0;$i<count($queslist);$i++){
+    for($i=0;$i<count($quest);$i++){
         $a=Question::find($qno[$i]);
-        $$queslist[$no[$i]]=$a->question;
+        $queslist[$qno[$i]]=$a->question;
     }
-        
+    
         return view('usersquestions',compact('user','queslist'));
 
 
@@ -218,7 +218,74 @@ class HomeController extends Controller
        // dd($alist);
     
 
-        return view('question',compact('quest','alist','namelist'));
+        return view('question',compact('quest','alist'));
       }
+
+      public function addanswers($qdetails){
+        if(Session::get('user')==null){
+
+            return view('welcome');
+        }
+               
+         else $user=Session::get('user');
+         
+         $quesdetail= Question::find($qdetails);
+        
+         $fetcheduid=$quesdetail->uid;
+        
+         $data=request()->validate(
+            [
+                "postanswer"=>'required'
+            ]);
+
+            $q=new Answer();
+            $q->answer=request()->postanswer;
+            $q->qid=$qdetails;
+            $q->quid=$fetcheduid;
+            $q->aid=$user->user_id;
+
+            $q->save();
+
+            echo "success";
+
+            $notification = array(
+              'message' => 'Answer Submitted Please Refresh Page',
+              'alert-type' => 'success'
+            );
+
+            return back()->with($notification);
+    }
+    public function viewanswers(){
+        if(Session::get('user')==null){
+
+            return view('welcome');
+        }
+               
+         else $user=Session::get('user');
+
+        // dd($user);
+         
+         $answerlist=Answer::where('aid',$user->user_id)->get();
+        
+        //  dd($answerlist);
+
+         $anlist=array();
+        for($i=0;$i<count($answerlist);$i++){
+            $anslist[$i] =$answerlist[$i]->answer;
+        }
+        $qnlist=array();
+        for($i=0;$i<count($answerlist);$i++){
+            $qid =$answerlist[$i]->qid;
+            $fetchedqs=Question::find($qid);
+            $qnlist[$i]=$fetchedqs->question;
+        }
+        $nestedarray=array();
+        for($i=0;$i<count($answerlist);$i++){
+            $nestedarray[$qnlist[$i]]=$anslist[$i];
+        }
+       // dd($nestedarray);
+        
+        return view('useranswers',compact('nestedarray','user'));
+    }
 
 }

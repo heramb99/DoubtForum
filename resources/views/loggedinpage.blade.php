@@ -50,7 +50,7 @@
                         <div class="card">
                         <div class="icon-block">
                             <h2 class="center brown-text"><i class="material-icons">insert_comment</i></h2>
-                            <h5 class="center"><a href='/viewreport'>Your Answers</a></h5>
+                            <h5 class="center"><a href="{{ url('/fetchqna') }}">Your Answers</a></h5>
                 
                             <p class="center light">Answers Given By You</p>
                         </div>

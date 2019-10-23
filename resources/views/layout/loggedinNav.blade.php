@@ -49,10 +49,10 @@
             <a href="#">Welcome {{ $user->name }}</a>
             <a href="{{ url('/ask') }}">Ask</a>
             <a href="{{ url('/fetchquestion') }}">Your Questions</a>
-            <a href="#">Your Answers</a>
+            <a href="{{ url('/fetchqna') }}">Your Answers</a>
             
             
-            <div class="dropdown">
+            <!-- <div class="dropdown">
                                         <button class="dropbtn">Topics
                                             <i class="material-icons">arrow_drop_down</i>
                                         </button>
@@ -61,7 +61,17 @@
                                             <a href="/timeline">Java</a>
                                             <a href="/timeline2">C++</a>
                                         </div>
-            </div>
+            </div> -->
+
+            <div class="dropdown" style="padding-top:0px;">
+          <!--<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Topics
+          <span class="caret"></span></button>
+          --><ul>
+            <li><a href="{{ url('/pyq') }}" >Python</a></li>
+            <li><a href="{{ url('/javaq') }}">Java</a></li>
+            <li><a href="{{ url('/cq') }}">C++</a></li>
+          </ul>
+        </div>
           
             
         <div class="w3-container">
