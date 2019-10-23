@@ -29,4 +29,9 @@ Route::get('/fetchquestion','HomeController@fetchquestion');
 
 Route::get('/pyq','HomeController@fetchquestionforpy');
 
+Route::get('/javaq','HomeController@fetchquestionforjava');
+
+Route::get('/cq','HomeController@fetchquestionforc');
+
+
 

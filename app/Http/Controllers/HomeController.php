@@ -124,8 +124,31 @@ class HomeController extends Controller
             $qno[$i] =$quest[$i]->question;
         }
         
-        return view('pyquestions',compact('qno'));
+        return view('questionslist',compact('qno'));
+      }
+      public function fetchquestionforjava()
+      {
+        $quest= Question::where('field','Java')->get();
 
+        $qno=array();
+
+        for($i=0;$i<count($quest);$i++){
+            $qno[$i] =$quest[$i]->question;
+        }
+        
+        return view('questionslist',compact('qno'));
+      }
+      public function fetchquestionforc()
+      {
+        $quest= Question::where('field','C++')->get();
+
+        $qno=array();
+
+        for($i=0;$i<count($quest);$i++){
+            $qno[$i] =$quest[$i]->question;
+        }
+        
+        return view('questionslist',compact('qno'));
       }
 
 }

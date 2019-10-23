@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 23, 2019 at 03:14 PM
+-- Generation Time: Oct 23, 2019 at 03:37 PM
 -- Server version: 10.3.15-MariaDB
 -- PHP Version: 7.1.30
 
@@ -58,7 +58,12 @@ CREATE TABLE `questions` (
 INSERT INTO `questions` (`id`, `uid`, `question`, `field`) VALUES
 (2, 1, 'Test Doubt', 'Python'),
 (3, 1, 'try:     Some code except:     log error in my own words, i.e \'Some code\' failed to execute     Some other code This catches all exceptions thus ensuring my site does not deliver 500 errors and such like.', 'Python'),
-(4, 1, 'the error it returns is:  NameError: name \'lives\' is not defined I know the code isn\'t as efficient as possible, this is one of my first projects', 'Python');
+(4, 1, 'the error it returns is:  NameError: name \'lives\' is not defined I know the code isn\'t as efficient as possible, this is one of my first projects', 'Python'),
+(5, 1, 'While creating an object of using Class.forName() I am getting following Errors. Can you please confirm where I am doing wrong.', 'Java'),
+(6, 1, 'Please excuse what is probably a very basic question, but I am writing a program to store employee info and it works fine until it tries to set the info inside my employee class. It gives a stackoverflow error and I cannot figure out why.', 'Java'),
+(7, 1, 'String objects are immutable. Then how come the object str can be assigned value \"Help!\". Isn\'t this contradicting the immutability of strings in Java? Can anybody please explain me the exact concept of immutability?', 'Java'),
+(8, 1, 'In C++, I\'m finding out that I can\'t return a null value if the object doesn\'t exist. I just want to return an \'indicator\' of type T that notifies the calling function that no object has been found.', 'C++'),
+(9, 1, 'list<int>L[]=new list<int>[20]; This gives an error \" array initializer must be an initializer list\" What is wrong with initializing list like:  list<int> L[100];', 'C++');
 
 -- --------------------------------------------------------
 
@@ -119,7 +124,7 @@ ALTER TABLE `answers`
 -- AUTO_INCREMENT for table `questions`
 --
 ALTER TABLE `questions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `users`
