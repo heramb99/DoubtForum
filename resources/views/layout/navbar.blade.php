@@ -1,8 +1,30 @@
-
 <title>Doubt Forum</title>
+<style>
+            #page-container {
+              position: relative;
+              min-height: 100vh;
+            }
 
+            #content-wrap {
+              padding-bottom: 5rem;    /* Footer height */
+            }
+
+            footer {
+              position: absolute;
+              bottom: 0;
+              width: 100%;
+              height: 5rem;            /* Footer height */
+            }
+        </style>
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
 <script>     
             $(document).ready(function(){
             $('.modal').modal();
@@ -23,11 +45,21 @@
     <link href="http://allfont.net/allfont.css?fonts=comic-sans-ms" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1">      
+      <link rel = "stylesheet"
+         href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel = "stylesheet"
+         href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      <script type = "text/javascript"
+         src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+      </script> 
     
 
 
 
-<div class="topnav">
+<div class="topnav" >
     <a href="/">Home</a>
     <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Login</a> -->
 
@@ -90,8 +122,8 @@
             </div>
         </div>
     </div>
-
-    <div class="dropdown">
+    <!--
+    <div class="dropdown" style="width: 10%;">
                                 <button class="dropbtn">Topics
                                 <i class="material-icons">arrow_drop_down</i>
                                 </button>
@@ -100,16 +132,67 @@
                                     <a href="{{ url('/javaq') }}">Java</a>
                                     <a href="{{ url('/cq') }}">C++</a>
                                 </div>
-                            </div>
+        
+    </div>-->
+        <div class="dropdown" style="padding-top:0px;">
+          <!--<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Topics
+          <span class="caret"></span></button>
+          --><ul>
+            <li><a href="{{ url('/pyq') }}" >Python</a></li>
+            <li><a href="{{ url('/javaq') }}">Java</a></li>
+            <li><a href="{{ url('/cq') }}">C++</a></li>
+          </ul>
+        </div>
+    
+    
+    <!--<div class=".input-field" style="left:50%;position:absolute;">
+            <div class="input-field col s12">
+            <select>
+              <option value=""  selected>Choose your option</option>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+            <label>Materialize Select</label>
+          </div>
+  </div>
     <div class="search-container">
         <form action="/action_page.php">
         <input type="text" placeholder="Search.." name="search">
         <button type="submit"><i class="material-icons">search</i></button>
         </form>
+    </div> -->
+    <!--
+    <div class="search-container">
+    <form>
+            <div class="input-field">
+              <input id="search" type="search" required>
+              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+            </div>
+   </form>
+   </div> -->
+    
+   
+    <div class="nav-wrapper" style="align:right;">
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li>
+          <form>
+            <div class="input-field">
+              <input id="search" type="search" required>
+              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+              <i class="material-icons">close</i>
+            </div>
+          </form>
+        </li>
+      </ul>
     </div>
+    
 </div>
 
+<div id="page-container">
+           <div id="content-wrap">
 @yield('content')
+</div>
 
 <footer>
     <div class="footcontent1">
@@ -121,14 +204,13 @@
         <ul class="footerul">
             <li class="footerlist"><a href="#">Link1</a></li>
             <li class="footerlist"><a href="#">Link2</a></li>
-            <li class="footerlist"><a href="#">Link3</a></li>
         </ul>
 
 
     </div>
     
 </footer>
-    
+     </div>
 
 
 
