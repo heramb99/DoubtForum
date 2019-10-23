@@ -5,6 +5,7 @@
     <style>
         html, body{
   height: 100%;
+            
 }
     </style>
       <meta name = "viewport" content = "width = device-width, initial-scale = 1">      
@@ -18,7 +19,7 @@
       </script>             
    </head> 
 <div class="container ">
-  <div class="section" style="background-color:orangered;text-align: center;">
+  <div class="section" style="background-color:#D3CABA;text-align: center;">
        <div class="row">
         <div class="col s6 offset-s6"><h5>Question</h5></div><br><br>
         <div class="col s12"><p>&nbsp;Your question here</p></div>
