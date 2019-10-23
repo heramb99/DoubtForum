@@ -48,7 +48,7 @@
         <div class="topnav">
             <a href="#">Welcome {{ $user->name }}</a>
             <a href="{{ url('/ask') }}">Ask</a>
-            <a href="#">Your Questions</a>
+            <a href="{{ url('/fetchquestion') }}">Your Questions</a>
             <a href="#">Your Answers</a>
             
             
