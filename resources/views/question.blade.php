@@ -19,34 +19,34 @@
       </script>             
    </head> 
 <div class="container ">
-  <div class="section" style="background-color:#D3CABA;text-align: center;">
+  <div class="section" style="background-color:#6b85ea;text-align: center;">
        <div class="row">
         <div class="col s6 offset-s6"><h5>Question</h5></div><br><br>
         <div class="col s12"><p>&nbsp;Your question here</p></div>
        </div>  
   </div>
   <div class="divider"></div>
-  <div class="section">
+  <div class="section" style="background-color:#33499b">
        <div class="row">
-        <div class="col s12"><h5>Answer 1</h5></div><br><br>
-        <div class="col s12"><p>Answer 1</p></div>
+        <div class="col s12"><h5>&nbsp;Answer 1</h5></div><br><br>
+        <div class="col s12"><p>&nbsp;Answer 1</p></div>
        </div>  
   </div>
   <div class="divider"></div>
-  <div class="section">
+  <div class="section" style="background-color:#33499b">
        <div class="row">
-        <div class="col s12"><h5>Answer 1</h5></div><br><br>
-        <div class="col s12"><p>Answer 1</p></div>
+        <div class="col s12"><h5>&nbsp;Answer 1</h5></div><br><br>
+        <div class="col s12"><p>&nbsp;Answer 1</p></div>
        </div>  
   </div>
   <div class="divider"></div>
-  <div class="section">
+  <div class="section" style="background-color:#6b85ea">
        <div class="row">
            <form>
-               <div class="col s12"><h5>Your Answer</h5></div><br><br>
-               <div class="col s12"><textarea rows="50" cols="120"></textarea></div>
+               <div class="col s12"><h5>&nbsp;Your Answer</h5></div><br><br>
+               <div class="col s12" style="background-color:white"><textarea rows="50" cols="120"></textarea></div>
                <div class="col s12"><span>&nbsp;</span></div>
-               <input type="submit" value="Post answer">
+               &nbsp;&nbsp;&nbsp;<input type="submit" value="Post answer">
            </form>
        </div>  
   </div>
