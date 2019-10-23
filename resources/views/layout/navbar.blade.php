@@ -95,9 +95,9 @@
                                 <i class="material-icons">arrow_drop_down</i>
                                 </button>
                                 <div class="dropdown-content">
-                                    <a href="/timeline1">Python</a>
-                                    <a href="/timeline">Java</a>
-                                    <a href="/timeline2">C++</a>
+                                    <a href="{{ url('/pyq') }}">Python</a>
+                                    <a href="{{ url('/javaq') }}">Java</a>
+                                    <a href="{{ url('/cq') }}">C++</a>
                                 </div>
                             </div>
     <div class="search-container">

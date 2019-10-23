@@ -27,4 +27,6 @@ Route::post('/addquestion','HomeController@addquestion');
 
 Route::get('/fetchquestion','HomeController@fetchquestion');
 
+Route::get('/pyq','HomeController@fetchquestionforpy');
+
 

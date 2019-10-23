@@ -113,7 +113,19 @@ class HomeController extends Controller
                
          else $user=Session::get('user');
 
-         
+      }
+      public function fetchquestionforpy()
+      {
+        $quest= Question::where('field','Python')->get();
 
-    }
+        $qno=array();
+
+        for($i=0;$i<count($quest);$i++){
+            $qno[$i] =$quest[$i]->question;
+        }
+        
+        return view('pyquestions',compact('qno'));
+
+      }
+
 }

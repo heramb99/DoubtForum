@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 14, 2019 at 06:56 PM
+-- Generation Time: Oct 23, 2019 at 03:14 PM
 -- Server version: 10.3.15-MariaDB
 -- PHP Version: 7.1.30
 
@@ -56,7 +56,9 @@ CREATE TABLE `questions` (
 --
 
 INSERT INTO `questions` (`id`, `uid`, `question`, `field`) VALUES
-(2, 1, 'Test Doubt', 'Python');
+(2, 1, 'Test Doubt', 'Python'),
+(3, 1, 'try:     Some code except:     log error in my own words, i.e \'Some code\' failed to execute     Some other code This catches all exceptions thus ensuring my site does not deliver 500 errors and such like.', 'Python'),
+(4, 1, 'the error it returns is:  NameError: name \'lives\' is not defined I know the code isn\'t as efficient as possible, this is one of my first projects', 'Python');
 
 -- --------------------------------------------------------
 
@@ -117,7 +119,7 @@ ALTER TABLE `answers`
 -- AUTO_INCREMENT for table `questions`
 --
 ALTER TABLE `questions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`

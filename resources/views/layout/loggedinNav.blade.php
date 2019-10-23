@@ -62,16 +62,16 @@
                                             <a href="/timeline2">C++</a>
                                         </div>
             </div>
+          
             
-            
-<div class="w3-container">
+        <div class="w3-container">
             <div class="logoutBT">
                 <form action="{{ url('/logout') }}" method="get">
                     <button type="submit">Logout</button>
                 </form>
             </div>
         </div>
-                </div>
+</div>
     </head>
     
     <body>
