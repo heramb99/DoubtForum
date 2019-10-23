@@ -1,7 +1,7 @@
 @extends('layout.navbar')
 
 @section('content')
-<!-- <head>
+ <head>
     <style>
         html, body{
   height: 100%;
@@ -16,13 +16,12 @@
          src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
       <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
       </script>             
-   </head> -->
-    
+   </head> 
 <div class="container ">
-  <div class="section" style="background-color:orangered">
+  <div class="section" style="background-color:orangered;text-align: center;">
        <div class="row">
-        <div class="col s12"><h5>Question</h5></div><br><br>
-        <div class="col s12"><p>Your question here</p></div>
+        <div class="col s6 offset-s6"><h5>Question</h5></div><br><br>
+        <div class="col s12"><p>&nbsp;Your question here</p></div>
        </div>  
   </div>
   <div class="divider"></div>
