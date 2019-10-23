@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 23, 2019 at 03:37 PM
+-- Generation Time: Oct 23, 2019 at 11:07 PM
 -- Server version: 10.3.15-MariaDB
 -- PHP Version: 7.1.30
 
@@ -37,6 +37,19 @@ CREATE TABLE `answers` (
   `upvote` int(11) NOT NULL DEFAULT 0,
   `downvote` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+--
+-- Dumping data for table `answers`
+--
+
+INSERT INTO `answers` (`id`, `qid`, `quid`, `aid`, `answer`, `upvote`, `downvote`) VALUES
+(1, 3, 1, 1, 'test answer test answer test answer test answer test answer test answer test answer test answer', 0, 0),
+(2, 3, 1, 6, 'asndlskjdnsjkndjkdnajkaddlsdansdkjnandsjkasdasdsdada', 0, 0),
+(3, 3, 1, 1, '$qd=$quest->id $qd=$quest->id$qd=$quest->id', 0, 0),
+(4, 3, 1, 1, '404 Not Found404 Not Found404 Not Found', 0, 0),
+(5, 3, 1, 1, 'test answer', 0, 0),
+(6, 3, 1, 8, 'test2@test.test test2@test.testtest2@test.test', 0, 0),
+(7, 4, 1, 1, 'dd($answerlist);   dd($answerlist);', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -118,7 +131,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `answers`
 --
 ALTER TABLE `answers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `questions`
