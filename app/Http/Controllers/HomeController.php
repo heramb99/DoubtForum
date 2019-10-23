@@ -120,8 +120,14 @@ class HomeController extends Controller
         for($i=0;$i<count($quest);$i++){
             $qno[$i] =$quest[$i]->question;
         }
+
+        $queslist=array();
+    for($i=0;$i<count($queslist);$i++){
+        $a=Question::find($qno[$i]);
+        $$queslist[$no[$i]]=$a->question;
+    }
         
-        return view('usersquestions',compact('qno','user'));
+        return view('usersquestions',compact('user','queslist'));
 
 
     }
@@ -134,8 +140,14 @@ class HomeController extends Controller
         for($i=0;$i<count($quest);$i++){
             $qno[$i] =$quest[$i]->question;
         }
+
+        $queslist=array();
+        for($i=0;$i<count($queslist);$i++){
+            $a=Question::find($qno[$i]);
+            $$queslist[$no[$i]]=$a->question;
+        }
         
-        return view('questionslist',compact('qno'));
+        return view('questionslist',compact('queslist'));
       }
       public function fetchquestionforjava()
       {
@@ -146,8 +158,13 @@ class HomeController extends Controller
         for($i=0;$i<count($quest);$i++){
             $qno[$i] =$quest[$i]->question;
         }
+        $queslist=array();
+        for($i=0;$i<count($queslist);$i++){
+            $a=Question::find($qno[$i]);
+            $$queslist[$no[$i]]=$a->question;
+        }
         
-        return view('questionslist',compact('qno'));
+        return view('questionslist',compact('queslist'));
       }
       public function fetchquestionforc()
       {
@@ -158,8 +175,13 @@ class HomeController extends Controller
         for($i=0;$i<count($quest);$i++){
             $qno[$i] =$quest[$i]->question;
         }
+        $queslist=array();
+        for($i=0;$i<count($queslist);$i++){
+            $a=Question::find($qno[$i]);
+            $$queslist[$no[$i]]=$a->question;
+        }
         
-        return view('questionslist',compact('qno'));
+        return view('questionslist',compact('queslist'));
       }
 
 }
