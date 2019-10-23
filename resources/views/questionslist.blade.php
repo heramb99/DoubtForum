@@ -18,11 +18,17 @@
       <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
       </script>             
    </head> 
-         @foreach ($qno as $singleques)            
+    
+   
+
+         @foreach ($queslist as $singleques) 
+                  
             <div class="container ">
+            <?php $key=array_search($singleques ,$queslist) ?>
               <div class="section">
                    <div class="row">
-                    <div class="col s12"><a href="/">{{$singleques}}</a></div>
+                   <?php $key=array_search($singleques,$queslist) ?>
+                    <div class="col s12"><a href="{{ url('answer',['qid'=> $key]) }}" >{{$singleques}}</a></div>
                    </div>  
               </div>
               <div class="divider"></div>

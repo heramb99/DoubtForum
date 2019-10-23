@@ -33,6 +33,8 @@ Route::get('/javaq','HomeController@fetchquestionforjava');
 
 Route::get('/cq','HomeController@fetchquestionforc');
 
+Route::get('/answer/{qid}','HomeController@fetchanswers');
+
 Route::get('/seequestion',function() {
     return view('question');
 });

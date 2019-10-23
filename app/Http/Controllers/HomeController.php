@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\User;
 use App\Question;
+use App\Answer;
 use Session;
 use Illuminate\Http\Request;
 
@@ -138,14 +139,17 @@ class HomeController extends Controller
         $qno=array();
 
         for($i=0;$i<count($quest);$i++){
-            $qno[$i] =$quest[$i]->question;
+            $qno[$i] =$quest[$i]->id;   
         }
 
+       // dd($qnolist);
         $queslist=array();
-        for($i=0;$i<count($queslist);$i++){
+
+        for($i=0;$i<count($quest);$i++){
             $a=Question::find($qno[$i]);
-            $$queslist[$no[$i]]=$a->question;
+            $queslist[$qno[$i]]=$a->question;
         }
+       // dd($queslist);
         
         return view('questionslist',compact('queslist'));
       }
@@ -156,12 +160,12 @@ class HomeController extends Controller
         $qno=array();
 
         for($i=0;$i<count($quest);$i++){
-            $qno[$i] =$quest[$i]->question;
+            $qno[$i] =$quest[$i]->id;
         }
         $queslist=array();
-        for($i=0;$i<count($queslist);$i++){
+        for($i=0;$i<count($quest);$i++){
             $a=Question::find($qno[$i]);
-            $$queslist[$no[$i]]=$a->question;
+            $queslist[$qno[$i]]=$a->question;
         }
         
         return view('questionslist',compact('queslist'));
@@ -173,15 +177,48 @@ class HomeController extends Controller
         $qno=array();
 
         for($i=0;$i<count($quest);$i++){
-            $qno[$i] =$quest[$i]->question;
+            $qno[$i] =$quest[$i]->id;
         }
+
+       // dd($qno);
         $queslist=array();
-        for($i=0;$i<count($queslist);$i++){
+        for($i=0;$i<count($quest);$i++){
             $a=Question::find($qno[$i]);
-            $$queslist[$no[$i]]=$a->question;
+           // dd($a->question);
+            $queslist[$qno[$i]]=$a->question;
         }
+        //dd($queslist);
+        
         
         return view('questionslist',compact('queslist'));
+      }
+
+      public function fetchanswers($qid)
+      {
+        $quest= Question::find($qid);
+
+        //dd($quest);
+
+        $answerlist=Answer::where('qid',$qid)->get();
+
+        $namelist=array();
+        for($i=0;$i<count($answerlist);$i++){
+            $aid =$answerlist[$i]->aid;
+            $userdetail= User::find($aid);
+
+            $namelist[$i] =$userdetail->name;
+
+        }
+
+        $alist=array();
+        for($i=0;$i<count($answerlist);$i++){
+            $alist[$namelist[$i]] =$answerlist[$i]->answer;
+        }
+
+       // dd($alist);
+    
+
+        return view('question',compact('quest','alist','namelist'));
       }
 
 }
