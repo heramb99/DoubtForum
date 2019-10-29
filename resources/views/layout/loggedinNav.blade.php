@@ -30,7 +30,7 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
-            <title>IT UPDATES</title>
+           
 
             <link rel="stylesheet" href="css/style.css">
             <link rel="stylesheet" href="css/headerFooter.css">
@@ -67,9 +67,9 @@
           <!--<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Topics
           <span class="caret"></span></button>
           --><ul>
-            <li><a href="{{ url('/pyq') }}" >Python</a></li>
-            <li><a href="{{ url('/javaq') }}">Java</a></li>
-            <li><a href="{{ url('/cq') }}">C++</a></li>
+            <li><a href="{{ url('/pyqlogged') }}" >Python</a></li>
+            <li><a href="{{ url('/javaqlogged') }}">Java</a></li>
+            <li><a href="{{ url('/cqlogged') }}">C++</a></li>
           </ul>
         </div>
           

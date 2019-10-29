@@ -27,11 +27,18 @@ Route::post('/addquestion','HomeController@addquestion');
 
 Route::get('/fetchquestion','HomeController@fetchquestion');
 
+
 Route::get('/pyq','HomeController@fetchquestionforpy');
 
 Route::get('/javaq','HomeController@fetchquestionforjava');
 
 Route::get('/cq','HomeController@fetchquestionforc');
+
+Route::get('/pyqlogged','HomeController@fetchquestionforpylogged');
+
+Route::get('/javaqlogged','HomeController@fetchquestionforjavalogged');
+
+Route::get('/cqlogged','HomeController@fetchquestionforclogged');
 
 Route::get('/answer/{qid}','HomeController@fetchanswers');
 

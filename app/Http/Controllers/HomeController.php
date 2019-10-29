@@ -106,13 +106,19 @@ class HomeController extends Controller
     }
 
     public function fetchquestion(){
-
+        
         if(Session::get('user')==null){
+            
+            $notification = array(
+              'message' => 'Login to answer question',
+              'alert-type' => 'error'
+            );
 
-            return view('welcome');
+            return back()->with($notification);
         }
                
          else $user=Session::get('user');
+
 
          $quest= Question::where('uid',$user->user_id)->get();
         
@@ -128,10 +134,12 @@ class HomeController extends Controller
         $queslist[$qno[$i]]=$a->question;
     }
     
-        return view('usersquestions',compact('user','queslist'));
+        return view('usersquestions',compact('queslist','user'));
 
 
     }
+    
+    //non members
       public function fetchquestionforpy()
       {
         $quest= Question::where('field','Python')->get();
@@ -193,8 +201,92 @@ class HomeController extends Controller
         return view('questionslist',compact('queslist'));
       }
 
+    //members
+    
+    public function fetchquestionforpylogged()
+      {
+        if(Session::get('user')==null){
+
+            return view('welcome');
+        }
+               
+         else $user=Session::get('user');
+        $quest= Question::where('field','Python')->get();
+
+        $qno=array();
+
+        for($i=0;$i<count($quest);$i++){
+            $qno[$i] =$quest[$i]->id;   
+        }
+
+       // dd($qnolist);
+        $queslist=array();
+
+        for($i=0;$i<count($quest);$i++){
+            $a=Question::find($qno[$i]);
+            $queslist[$qno[$i]]=$a->question;
+        }
+       // dd($queslist);
+        
+        return view('loggedinquestionlist',compact('queslist','user'));
+      }
+      public function fetchquestionforjavalogged()
+      {
+          
+          if(Session::get('user')==null){
+
+            return view('welcome');
+        }
+               
+         else $user=Session::get('user');
+        $quest= Question::where('field','Java')->get();
+
+        $qno=array();
+
+        for($i=0;$i<count($quest);$i++){
+            $qno[$i] =$quest[$i]->id;
+        }
+        $queslist=array();
+        for($i=0;$i<count($quest);$i++){
+            $a=Question::find($qno[$i]);
+            $queslist[$qno[$i]]=$a->question;
+        }
+        
+        return view('loggedinquestionlist',compact('queslist','user'));
+      }
+      public function fetchquestionforclogged()
+      {
+          if(Session::get('user')==null){
+
+            return view('welcome');
+        }
+               
+         else $user=Session::get('user');
+        $quest= Question::where('field','C++')->get();
+
+        $qno=array();
+
+        for($i=0;$i<count($quest);$i++){
+            $qno[$i] =$quest[$i]->id;
+        }
+
+       // dd($qno);
+        $queslist=array();
+        for($i=0;$i<count($quest);$i++){
+            $a=Question::find($qno[$i]);
+           // dd($a->question);
+            $queslist[$qno[$i]]=$a->question;
+        }
+        //dd($queslist);
+        
+        
+        return view('loggedinquestionlist',compact('queslist','user'));
+      }
+
       public function fetchanswers($qid)
       {
+          
+        
         $quest= Question::find($qid);
 
         //dd($quest);
@@ -223,8 +315,13 @@ class HomeController extends Controller
 
       public function addanswers($qdetails){
         if(Session::get('user')==null){
+            
+            $notification = array(
+              'message' => 'Login to answer question',
+              'alert-type' => 'error'
+            );
 
-            return view('welcome');
+            return back()->with($notification);
         }
                
          else $user=Session::get('user');
