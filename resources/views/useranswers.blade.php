@@ -2,12 +2,14 @@
 
 @section('content')
 <head>
-    <style>
+        <style>
         html, body{
   height: 100%;
-            
+            background-color: aquamarine;
+        
 }
-    </style>
+         
+    </style> 
       <meta name = "viewport" content = "width = device-width, initial-scale = 1">      
       <link rel = "stylesheet"
          href = "https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -24,9 +26,9 @@
     <li>
     <?php $key=array_search($qna ,$nestedarray) ?>
    <div class="container ">
-  <div class="section" style="background-color:#6b85ea;text-align: center;">
+  <div class="section" style="background-color:#6b85ea">
        <div class="row">
-        <div class="col s12" style="text-align:center;"><h5>Question</h5></div><br><br>
+        <div class="col s12"><h5>&nbsp;Question</h5></div><br><br>
         <div class="col s12"><p>&nbsp;{{$key}}</p></div>
        </div>  
   </div>
@@ -39,6 +41,7 @@
                <div class="col s12"><p>&nbsp;{{$qna}}</p></div>
                </div>  
          </div>
+        </div>
       </li>
       @endforeach
   </ul>
