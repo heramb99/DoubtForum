@@ -82,7 +82,26 @@
 <div class="topnav" >
     <a href="/">Home</a>
     <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Login</a> -->
-
+    
+        <div class="dropdown" style="padding-top:0px;">
+          <ul>
+            <li><a href="{{ url('/pyq') }}" >Python</a></li>
+            <li><a href="{{ url('/javaq') }}">Java</a></li>
+            <li><a href="{{ url('/cq') }}">C++</a></li>
+          </ul>
+        </div>
+    
+   
+    <div class="nav-wrapper" >
+          <form>
+            <div class="input-field">
+              <input id="search" type="search" required style="background-color: white;">
+              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+              <i class="material-icons">close</i>
+            </div>
+          </form>
+    </div>
+    
     <div class="w3-container">
     
         <button onclick="document.getElementById('id01').style.display='block'">Login</button>
@@ -141,30 +160,6 @@
             </div>
             </div>
         </div>
-    </div>
-    
-        <div class="dropdown" style="padding-top:0px;">
-          <ul>
-            <li><a href="{{ url('/pyq') }}" >Python</a></li>
-            <li><a href="{{ url('/javaq') }}">Java</a></li>
-            <li><a href="{{ url('/cq') }}">C++</a></li>
-          </ul>
-        </div>
-    
-   
-    <div class="nav-wrapper" style="align:right;">
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li>
-          <form>
-            <div class="input-field">
-              <!-- <input id="search" type="search" required> -->
-              <input id="search" name="search" type="text" class="form-control" placeholder="Search" />
-              <!-- <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-              <i class="material-icons">close</i> -->
-            </div>
-          </form>
-        </li>
-      </ul>
     </div>
     
 </div>
