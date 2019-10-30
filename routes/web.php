@@ -46,6 +46,9 @@ Route::get('/addanswer/{qdetails}','HomeController@addanswers');
 
 Route::get('/fetchqna','HomeController@viewanswers');
 
+// Route::get('search', 'AutoCompleteController@index');
+ Route::get('autocomplete', 'AutoCompleteController@search');
+
 Route::get('/seequestion',function() {
     return view('question');
 });
