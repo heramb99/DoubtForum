@@ -66,11 +66,11 @@
             <div class="dropdown" style="padding-top:0px;">
           <!--<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Topics
           <span class="caret"></span></button>
-          --><ul>
-            <li><a href="{{ url('/pyqlogged') }}" >Python</a></li>
-            <li><a href="{{ url('/javaqlogged') }}">Java</a></li>
-            <li><a href="{{ url('/cqlogged') }}">C++</a></li>
-          </ul>
+          -->
+            <a href="{{ url('/pyqlogged') }}" >Python</a>
+            <a href="{{ url('/javaqlogged') }}">Java</a>
+            <a href="{{ url('/cqlogged') }}">C++</a>
+          
         </div>
           
             
