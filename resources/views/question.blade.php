@@ -4,7 +4,6 @@
         html, body{
   height: 100%;
             background-color: aquamarine;
-        
 }
          
     </style> 
@@ -53,9 +52,6 @@
   </div>
 
   <ul>
-
-       
-
       @foreach($alist as $singleanswer)
       <li>
       <?php $key=array_search($singleanswer ,$alist) ?>
@@ -69,21 +65,30 @@
       </li>
       @endforeach
   </ul>
+    
   <div class="section" style="background-color:#6b85ea">
        <div class="row">
        <?php $qd=$quest->id ?>
-         
            <form action="{{ url('addanswer',['qdetails'=> $qd]) }}">
-          
            @csrf
                <div class="col s12"><h5>&nbsp;Your Answer</h5></div><br><br>
-               <div class="col s12" style="background-color:white"><input type="text" name="postanswer" id="answer" style="width:80%;">
-</div>
+               <div class="col s12">
+                   <div class="col s1">&nbsp;</div>
+                   <div class="col s10" style="background-color:white">
+                       <input type="text" name="postanswer" id="answer" style="width:100%;" required>
+                   </div>
+               </div>
                <div class="col s12"><span>&nbsp;</span></div>
-               &nbsp;&nbsp;&nbsp;<input type="submit">
+               <div class="col s12">
+                   <div class="col s5">&nbsp;</div>
+                   <div class="col s2" style="padding:0;">
+                       <input type="submit" style="display:block;width:100%;padding:0;border:none;">
+                   </div>
+               </div>
            </form>
        </div>  
   </div>
+    
 </div>
 
 
