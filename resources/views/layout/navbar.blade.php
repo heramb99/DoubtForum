@@ -9,12 +9,26 @@
               padding-bottom: 2.5rem;    /* Footer height */
             }
 
-            footer {
+            #footer{
               position: absolute;
               bottom: 0;
               width: 100%;
-              height: 2.5rem;            /* Footer height */
+              height: 2.5rem;  /* Footer height */
+             /* background-color: #3e64ff;
+              color: white;
+              display: flex;
+              align-items: center;
+              box-sizing: border-box;*/
             }
+    .footcontent{
+              background-color: #3e64ff;
+              color: white;
+              display: flex;
+              align-items: center;
+              box-sizing: border-box;
+              
+    }
+            
         </style>
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -122,55 +136,14 @@
             </div>
         </div>
     </div>
-    <!--
-    <div class="dropdown" style="width: 10%;">
-                                <button class="dropbtn">Topics
-                                <i class="material-icons">arrow_drop_down</i>
-                                </button>
-                                <div class="dropdown-content">
-                                    <a href="{{ url('/pyq') }}">Python</a>
-                                    <a href="{{ url('/javaq') }}">Java</a>
-                                    <a href="{{ url('/cq') }}">C++</a>
-                                </div>
-        
-    </div>-->
+    
         <div class="dropdown" style="padding-top:0px;">
-          <!--<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Topics
-          <span class="caret"></span></button>
-          --><ul>
+          <ul>
             <li><a href="{{ url('/pyq') }}" >Python</a></li>
             <li><a href="{{ url('/javaq') }}">Java</a></li>
             <li><a href="{{ url('/cq') }}">C++</a></li>
           </ul>
         </div>
-    
-    
-    <!--<div class=".input-field" style="left:50%;position:absolute;">
-            <div class="input-field col s12">
-            <select>
-              <option value=""  selected>Choose your option</option>
-              <option value="1">Option 1</option>
-              <option value="2">Option 2</option>
-              <option value="3">Option 3</option>
-            </select>
-            <label>Materialize Select</label>
-          </div>
-  </div>
-    <div class="search-container">
-        <form action="/action_page.php">
-        <input type="text" placeholder="Search.." name="search">
-        <button type="submit"><i class="material-icons">search</i></button>
-        </form>
-    </div> -->
-    <!--
-    <div class="search-container">
-    <form>
-            <div class="input-field">
-              <input id="search" type="search" required>
-              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-            </div>
-   </form>
-   </div> -->
     
    
     <div class="nav-wrapper" style="align:right;">
@@ -193,22 +166,25 @@
            <div id="content-wrap">
 @yield('content')
 </div>
-
-<footer>
-    <div class="footcontent1">
-       <p>We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+<!--<div id="footer">-->
+    <!--<footer>-->
+<span id="footer">
+   <div class="footcontent"> 
+       <p style="width:100%;text-align:center;">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p> 
+   </div>
+    <div class="footcontent">
+        <h4 class="connectheader" style="width:100%;text-align:center;">Connect</h4>
     </div>
-    <div class="footcontent2">
-        <h4 class="connectheader">Connect</h4>
-        <ul class="footerul">
-            <li class="footerlist"><a href="#">Link1</a></li>
-            <li class="footerlist"><a href="#">Link2</a></li>
+    <div class="footcontent">
+        <ul class="footerul" style="width:100%;text-align:center;">
+            <li class="footerlist"><a href="#" style="color: #ffffff">Link1</a></li>
+            <li class="footerlist"><a href="#" style="color: #ffffff">Link2</a></li>
         </ul>
-
-
-    </div>
+     </div>
+</span>
     
-</footer>
+    <!--</footer>-->
+<!--</div>-->
      </div>
 
 

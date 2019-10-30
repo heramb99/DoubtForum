@@ -11,12 +11,25 @@
               padding-bottom: 2.5rem;    /* Footer height */
             }
 
-            footer {
+            #footer{
               position: absolute;
               bottom: 0;
               width: 100%;
-              height: 2.5rem;            /* Footer height */
+              height: 2.5rem;  /* Footer height */
+             /* background-color: #3e64ff;
+              color: white;
+              display: flex;
+              align-items: center;
+              box-sizing: border-box;*/
             }
+    .footcontent{
+              background-color: #3e64ff;
+              color: white;
+              display: flex;
+              align-items: center;
+              box-sizing: border-box;
+              
+    }
         </style>
         <script src="{{ asset('js/app.js') }}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -90,22 +103,25 @@
            <div id="content-wrap">
                 @yield('content')
             </div>
-            <footer>
-    <div class="footcontent1">
-            <p>We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+           <!--<div id="footer">-->
+    <!--<footer>-->
+<span id="footer">
+   <div class="footcontent"> 
+       <p style="width:100%;text-align:center;">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p> 
+   </div>
+    <div class="footcontent">
+        <h4 class="connectheader" style="width:100%;text-align:center;">Connect</h4>
     </div>
-    <div class="footcontent2">
-        <h4 class="connectheader">Connect</h4>
-        <ul class="footerul">
-            <li class="footerlist"><a href="#">Link1</a></li>
-            <li class="footerlist"><a href="#">Link2</a></li>
-            <li class="footerlist"><a href="#">Link3</a></li>
+    <div class="footcontent">
+        <ul class="footerul" style="width:100%;text-align:center;">
+            <li class="footerlist"><a href="#" style="color: #ffffff">Link1</a></li>
+            <li class="footerlist"><a href="#" style="color: #ffffff">Link2</a></li>
         </ul>
-
-
-    </div>
+     </div>
+</span>
     
-</footer>
+    <!--</footer>-->
+<!--</div>-->
         </div>
     </body>
 </html>

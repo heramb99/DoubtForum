@@ -10,7 +10,7 @@ footer{
     margin: 0%;
     box-sizing: border-box;
 }
-.footcontent1{
+/*.footcontent1{
     flex: 1;
 }
 .footcontent2{
@@ -18,7 +18,8 @@ footer{
     display: flex;
     align-items: center;
     flex-direction: column;
-}
+}*/
+/*
 .connectheader{
     flex: 1;
 }
@@ -29,7 +30,7 @@ footer{
     text-decoration-style: none;
 }
 
-
+*/
 
 
 body {
