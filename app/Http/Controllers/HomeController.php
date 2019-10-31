@@ -289,9 +289,13 @@ class HomeController extends Controller
         
         $quest= Question::find($qid);
 
+        $accs=User::all();
+
         //dd($quest);
 
         $answerlist=Answer::where('qid',$qid)->get();
+
+       // dd($answerlist);
 
         $namelist=array();
         for($i=0;$i<count($answerlist);$i++){
@@ -308,9 +312,10 @@ class HomeController extends Controller
         }
 
        // dd($alist);
+      // dd($accs);
     
 
-        return view('question',compact('quest','alist'));
+        return view('question',compact('quest','alist','answerlist','accs'));
       }
 
       public function addanswers($qdetails){
