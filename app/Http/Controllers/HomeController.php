@@ -324,7 +324,8 @@ class HomeController extends Controller
             return back()->with($notification);
         }
                
-         else $user=Session::get('user');
+         else {
+         $user=Session::get('user');
          
          $quesdetail= Question::find($qdetails);
         
@@ -351,6 +352,7 @@ class HomeController extends Controller
             );
 
             return back()->with($notification);
+        }
     }
     public function viewanswers(){
         if(Session::get('user')==null){

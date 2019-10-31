@@ -5,6 +5,15 @@
   height: 100%;
             background-color: aquamarine;
 }
+.btt{
+    background: white;
+    padding: 1rem 0.5rem;
+    border: 1px solid black;
+    color: blue;
+    border-radius: 1rem;
+    font-size: 1rem;
+
+}
          
     </style> 
     
@@ -13,10 +22,17 @@
          href = "https://fonts.googleapis.com/icon?family=Material+Icons">
       <link rel = "stylesheet"
          href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+
+         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
       <script type = "text/javascript"
          src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
       <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
-      </script>    
+      </script> 
+
 
 <script>
 	@if(Session::has('message'))
@@ -82,7 +98,7 @@
                <div class="col s12">
                    <div class="col s5">&nbsp;</div>
                    <div class="col s2" style="padding:0;">
-                       <input type="submit" style="display:block;width:100%;padding:0;border:none;">
+                       <input type="submit" class="btt" style="display:block;width:100%;padding:0;border:none;">
                    </div>
                </div>
            </form>

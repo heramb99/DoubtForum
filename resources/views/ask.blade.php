@@ -1,6 +1,19 @@
 @extends('layout.loggedinNav')
 
 @section('content')
+<head>
+<style>
+button{
+    background: transparent;
+    padding: 1rem 0.5rem;
+    border: 1px solid blue;
+    color: blue;
+    border-radius: 1rem;
+    font-size: 1rem;
+
+}
+</style>
+</head>
 
 <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
 
