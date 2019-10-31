@@ -33,12 +33,7 @@
         </style>
         <script src="{{ asset('js/app.js') }}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script>     
-                    $(document).ready(function(){
-                    $('.modal').modal();
-                    });
-                </script>
-
+       
 
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -88,10 +83,10 @@
           
          <div class="nav-wrapper" >
           <form>
-            <div class="input-field">
-              <input id="search" type="search" required style="background-color: white;">
-              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-              <i class="material-icons">close</i>
+            <div class="input-group" style="margin-top: 10px;">
+              <input id="search" name="search" type="search" required style="background-color: white;" placeholder="Search...">
+              <!-- <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+              <i class="material-icons">close</i> -->
             </div>
           </form>
     </div>

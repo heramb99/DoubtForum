@@ -30,51 +30,67 @@
     }
             
         </style>
-<script src="{{ asset('js/app.js') }}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-<script>     
-            $(document).ready(function(){
-            $('.modal').modal();
-            });
-        </script>
 
-    
-    <meta charset="UTF-8">
+
+
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/headerFooter.css">
-
-
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-  
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+<script src="{{ asset('js/app.js') }}"></script>
+
+<!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<script type = "text/javascript"
+        src="https://code.jquery.com/jquery-1.12.4.js"></script> 
+<script type = "text/javascript"
+        src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    
+   
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/headerFooter.css">
+
+  
+  <script type = "text/javascript"
+         src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>     
+
+      <!-- <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+      </script>  -->
+ 
         
     
     <link href="http://allfont.net/allfont.css?fonts=comic-sans-ms" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         
-    <meta name = "viewport" content = "width = device-width, initial-scale = 1">      
+      
       <link rel = "stylesheet"
          href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+     
       <link rel = "stylesheet"
          href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
-      <script type = "text/javascript"
-         src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
-      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
-      </script> 
+
+         
+
     
 
 
@@ -94,10 +110,12 @@
    
     <div class="nav-wrapper" >
           <form>
-            <div class="input-field">
-              <input id="search" type="search" required style="background-color: white;">
-              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-              <i class="material-icons">close</i>
+            <div class="input-group" style="margin-top: 10px;">
+          
+              <input id="search" name="search" type="search" required style="background-color: white;" placeholder="Search...">
+              <!-- <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+              <i class="material-icons">close</i> -->
+             
             </div>
           </form>
     </div>
@@ -190,7 +208,7 @@
      </div>
      <script>
  $(document).ready(function() {
-    $( "#search" ).autocomplete({
+    $("#search").autocomplete({
  
         source: function(request, response) {
             $.ajax({
@@ -201,8 +219,8 @@
             dataType: "json",
             success: function(data){
                var resp = $.map(data,function(obj){
-                    //console.log(obj.city_name);
-                    return obj.name;
+                    console.log(obj.question);
+                    return obj.question;
                }); 
  
                response(resp);
